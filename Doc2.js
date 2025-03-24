@@ -421,3 +421,46 @@
 // ABC
 // abcd
 // ----------------
+
+// // Problem: Write a function that rotates an array to the right by a given number of steps.
+// // Testcase 1:
+// // Input: [1, 2, 3, 4, 5], 2
+// // Output: [4, 5, 1, 2, 3]
+
+// let arr=[1, 2, 3, 4, 5]
+// let steps=2
+// function rotate(arr,steps){
+// let temp=[]
+// let final=[]
+// for(i=0;i<steps;i++){
+//     temp.push(arr[i])
+// }                    -----------------------------------------------------------------------------
+// for(i=steps;i<arr.length;i++){
+//     final.push(arr[i])
+// }
+// for(i=0;i<temp.length;i++){
+//     final.push(temp[i])
+// }
+// console.log(final)
+// }
+// rotate(arr,steps) //Output: [4, 5, 1, 2, 3]
+
+// ---------------------------- 
+
+// Intersection of Two Arrays
+
+// Problem: Write a function that returns the common elements between two arrays.
+// Testcase 1:
+// Input: [1, 2, 3], [2, 3, 4]
+// Output: [2, 3]
+// let arr1=[1, 2, 3]
+// let arr2=[2, 3, 4]
+// let result=[]
+// for(i of arr1){
+//     for(j of arr2){
+//         if(i==j){
+//            result.push(i)
+//         }
+//     }
+// }
+// console.log(result); // Output: [2, 3]
