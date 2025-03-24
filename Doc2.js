@@ -532,3 +532,27 @@
 // zerosToEnd(arr); // Output: [1, 3, 12, 0, 0]
 // ----------------------------
 
+// Pair Sum
+// Problem: Write a function to find all pairs in an array whose sum is equal to a given target.
+// Testcase 1:
+// Input: [2, 4, 3, 5, 7, 8, 9], 7
+// Output: [[4, 3], [2, 5]]
+
+// let arr=[2, 4, 3, 5, 7, 8, 9, -2]
+// let sum=7
+// function pairSum(arr,sum){
+// let result=[]
+// for(i=0;i<arr.length;i++){
+//     let temp=[]
+//     for(j=i+1;j<arr.length;j++){
+//         if(arr[i]+arr[j]==sum){
+//             temp.push(arr[i],arr[j])
+//         }
+//     }
+//     if(temp.length>0){
+//         result.push(temp)
+//     }
+// }
+// console.log(result);
+// }
+// pairSum(arr,sum)  // Output: [ [ 2, 5 ], [ 4, 3 ], [ 9, -2 ] ]
