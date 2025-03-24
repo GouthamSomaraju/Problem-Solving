@@ -21,10 +21,10 @@
 //     }
 //     if(c1==c2) console.log(true);
 //     else console.log(false);
-    
+
 // }else{
 //     console.log('String length is not even to divide it into equal parts');
-    
+
 // }
 // --------------------------------
 
@@ -52,7 +52,7 @@
 //             b+=digit2
 //             break
 //         }
-        
+
 //         if(a==b){
 //             count++
 //         }
@@ -101,11 +101,11 @@
 //     }
 // }
 // if(exist){
-//     console.log(index); 
-    
+//     console.log(index);
+
 // }else{
 //     console.log('factorial of  the number is not present in array');
-    
+
 // } //Output: 4
 // ------------------
 
@@ -156,7 +156,7 @@
 // ---------------------------------
 
 // Testcase1	:  Enter number of rows: 4
-// Output     	: 
+// Output     	:
 
 // 1
 // 1 2
@@ -170,8 +170,8 @@
 //     console.log(s);
 // }
 // Output:
-// 1 
-// 1 2 
+// 1
+// 1 2
 // 1 2 3
 // 1 2 3 4
 // --------------
@@ -185,13 +185,13 @@
 //     console.log(s);
 // }
 // Output:
-// 4 3 2 1 
-// 4 3 2 
+// 4 3 2 1
+// 4 3 2
 // 4 3
 // 4
 // -----------
 // Testcase1	:  Enter number of rows: 4
-// Output     	: 
+// Output     	:
 
 // 1 1
 // 1 2 3
@@ -210,17 +210,17 @@
 
 //     }
 //     console.log(s);
-    
+
 // }
 // Output:
-// 1 1 
-// 1 2 3 
+// 1 1
+// 1 2 3
 // 1 2 3 6
 // 1 2 3 4 10
 // ----------------
 
 // Testcase1	:  Enter number of rows: 3
-// Output     	: 
+// Output     	:
 
 //       1
 //     1   2
@@ -236,16 +236,16 @@
 //         s+=j+' '
 //     }
 //     console.log(s);
-    
+
 // }
 // Output:
-//     1 
-//    1 2 
+//     1
+//    1 2
 //   1 2 3
 // ----------------
 
 // Testcase1	:  Enter number of rows: 4
-// Output     	: 
+// Output     	:
 
 // 1+
 // 12++
@@ -258,7 +258,7 @@
 //         s+=(j<=i)?j:'+'
 //     }
 //     console.log(s);
-    
+
 // }
 // // Output:
 // 1+
@@ -268,7 +268,7 @@
 // ----------------
 
 // Testcase1	:  Enter number of rows: 4
-// Output     	: 
+// Output     	:
 
 // +1
 // ++2
@@ -282,7 +282,7 @@
 //         s+=(j<=i)?'+':i
 //     }
 //     console.log(s);
-    
+
 // }
 // // Output:
 // +1
@@ -292,7 +292,7 @@
 // ----------------
 
 // Testcase1	:  Enter number of rows: 4
-// Output     	: 
+// Output     	:
 
 // +1
 // ++12
@@ -307,7 +307,7 @@
 //         s+=(j<=i)?'+':j-i
 //     }
 //     console.log(s);
-    
+
 // }
 // // Output:
 // +1
@@ -317,9 +317,9 @@
 // ----------------
 
 // Testcase1	:  Enter number of rows: 4
-// Output     	: 
+// Output     	:
 
-// A 
+// A
 // AB
 // ABC
 // ABCD
@@ -330,7 +330,7 @@
 // for(i=0;i<rows;i++){
 //     s+=String.fromCharCode(code+i)
 //     console.log(s);
-    
+
 // }
 // // Output:
 // A
@@ -340,7 +340,7 @@
 // ----------------
 
 // Testcase1	:  Enter number of rows: 3
-// Output     	: 
+// Output     	:
 
 //    A
 //  A  B
@@ -358,7 +358,7 @@
 //         code++
 //     }
 //     console.log(s);
-    
+
 // }
 // // Output:
 //     A
@@ -367,7 +367,7 @@
 // ----------------
 
 // Testcase1	:  Enter number of rows: 4
-// Output     	: 
+// Output     	:
 
 // A1
 // AB12
@@ -387,7 +387,7 @@
 //         }
 //     }
 //     console.log(s);
-    
+
 // }
 // // Output:
 // A1
@@ -396,7 +396,7 @@
 // ABCD1234
 // ----------------
 // Testcase1	:  Enter number of rows: 4
-// Output     	: 
+// Output     	:
 
 // A
 // ab
@@ -431,21 +431,21 @@
 // Input: [1, 2, 3, 4, 5], 2
 // Output: [4, 5, 1, 2, 3]
 
-function rotateArray(nums, k) {
-    const n = nums.length; 
-    k %= n; 
-    console.log(k); 
-    for (let i = 0; i < k; i++) {
-        let last = nums[n - 1]; 
-        for (let j = n - 1; j > 0; j--) { 
-            nums[j] = nums[j - 1]; 
-        }
-        nums[0] = last; 
-    }   
-    return nums;
-}
-console.log(rotateArray([1, 2, 3, 4, 5], 2)); // Output: [4, 5, 1, 2, 3]
-// ---------------------------- 
+// function rotateArray(nums, k) {
+//   const n = nums.length;
+//   k %= n;
+//   console.log(k);
+//   for (let i = 0; i < k; i++) {
+//     let last = nums[n - 1];
+//     for (let j = n - 1; j > 0; j--) {
+//       nums[j] = nums[j - 1];
+//     }
+//     nums[0] = last;
+//   }
+//   return nums;
+// }
+// console.log(rotateArray([1, 2, 3, 4, 5], 2)); // Output: [4, 5, 1, 2, 3]
+// ----------------------------
 
 // Intersection of Two Arrays
 
@@ -488,3 +488,47 @@ console.log(rotateArray([1, 2, 3, 4, 5], 2)); // Output: [4, 5, 1, 2, 3]
 // Testcase 1:
 // Input: [3, 5, -2, 8, 11]
 // Output: 8 * 11 → 88
+
+// let arr = [3, 5, -2, 8, 11];
+// function maxProduct(arr) {
+//   let max = arr[0];
+//   let secmax = arr[1];
+//   for (i of arr) {
+//     if (i > max) {
+//       secmax = max;
+//       max = i;
+//     } else if (i < max && i > secmax) {
+//       secmax = i;
+//     }
+//   }
+//   let maxProduct = max * secmax;
+//   console.log(maxProduct);
+// }
+// maxProduct(arr); // Output: 88
+// ----------------------------
+
+// Move Zeros to End
+
+// Problem: Write a function that moves all zeros in an array to the end while maintaining the order of other elements.
+// Testcase 1:
+// Input: [0, 1, 0, 3, 12]
+// Output: [1, 3, 12, 0, 0]
+
+// let arr = [0, 1, 0, 3, 12];
+// function zerosToEnd(arr) {
+//   let result = [];
+//   for (i of arr) {
+//     if (i !== 0) {
+//       result.push(i);
+//     }
+//   }
+//   let zeros = arr.length - result.length;
+//   while (zeros > 0) {
+//     result.push(0);
+//     zeros--;
+//   }
+//   console.log(result);
+// }
+// zerosToEnd(arr); // Output: [1, 3, 12, 0, 0]
+// ----------------------------
+
