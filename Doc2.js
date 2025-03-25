@@ -556,3 +556,24 @@
 // console.log(result);
 // }
 // pairSum(arr,sum)  // Output: [ [ 2, 5 ], [ 4, 3 ], [ 9, -2 ] ]
+// ----------------------------
+
+// Find the First Duplicate
+
+// Problem: Write a function to return the first duplicate value in an array.
+// Testcase 1:
+// Input: [2, 1, 3, 5, 3, 2]
+// Output: 3
+
+let arr=[2, 1, 3, 5, 3, 2]
+let result=[]
+for(i of arr){
+    if(result.includes(i)){
+        result.push(i)
+        break
+    }else{
+        result.push(i)
+    }
+}   
+
+console.log(result); // Output: 3
