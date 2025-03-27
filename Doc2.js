@@ -568,7 +568,12 @@
 let arr=[2, 1, 3, 5, 3, 2]
 let result=[]
 for(i of arr){
-    
+    if(result.includes(i)){
+        result.push(i)
+        break
+    }else{
+        result.push(i)
+    }
 }   
 
 console.log(result); // Output: 3
