@@ -564,19 +564,19 @@
 // Testcase 1:
 // Input: [1, 3, 20, 4, 1, 0]
 // Output: 20
-let arr=[201, 3, 2011, 4, 9001, 0]
-function peakElement(arr){
-    let res=0
-    for (i=0;i<arr.length;i++){
-        if(arr[i]>arr[i-1] && arr[i]>arr[i+1]){
-            if(arr[i]>res){
-                res=arr[i]
-            }
-        }
-    }
-    console.log(res);
-}
-peakElement(arr)
+// let arr=[201, 3, 2011, 4, 9001, 0]
+// function peakElement(arr){
+//     let res=0
+//     for (i=0;i<arr.length;i++){
+//         if(arr[i]>arr[i-1] && arr[i]>arr[i+1]){
+//             if(arr[i]>res){
+//                 res=arr[i]
+//             }
+//         }
+//     }
+//     console.log(res);
+// }
+// peakElement(arr)
 
 
 // ----------------------------
