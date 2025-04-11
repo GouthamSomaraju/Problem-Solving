@@ -558,6 +558,28 @@
 // pairSum(arr,sum)  // Output: [ [ 2, 5 ], [ 4, 3 ], [ 9, -2 ] ]
 // ----------------------------
 
+// Find Peak Element
+
+// Problem: Write a function to find a peak element in an array. An element is a peak if it is not smaller than its neighbours.
+// Testcase 1:
+// Input: [1, 3, 20, 4, 1, 0]
+// Output: 20
+let arr=[201, 3, 2011, 4, 9001, 0]
+function peakElement(arr){
+    let res=0
+    for (i=0;i<arr.length;i++){
+        if(arr[i]>arr[i-1] && arr[i]>arr[i+1]){
+            if(arr[i]>res){
+                res=arr[i]
+            }
+        }
+    }
+    console.log(res);
+}
+peakElement(arr)
+
+
+// ----------------------------
 // Find the First Duplicate
 
 // Problem: Write a function to return the first duplicate value in an array.
@@ -565,15 +587,27 @@
 // Input: [2, 1, 3, 5, 3, 2]
 // Output: 3
 
-let arr=[2, 1, 3, 5, 3, 2]
-let result=[]
-for(i of arr){
-    if(result.includes(i)){
-        result.push(i)
-        break
-    }else{
-        result.push(i)
-    }
-}   
+// let arr=[2, 1, 3, 5, 3, 2]
+// let result=[]
+// for(i of arr){
+//     if(result.includes(i)){
+//         result.push(i)
+//         break
+//     }else{
+//         result.push(i)
+//     }
+// }   
 
-console.log(result); // Output: 3
+// console.log(result); // Output: 3
+
+// let num=1723
+// // output:4
+// temp=0
+// while(num>0){
+//     digit=num%10
+//     temp=temp+digit
+//     num=Math.floor(num/10)
+// }
+
+
+// console.log(temp)
