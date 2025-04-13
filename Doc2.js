@@ -587,27 +587,34 @@
 // Input: [2, 1, 3, 5, 3, 2]
 // Output: 3
 
-// let arr=[2, 1, 3, 5, 3, 2]
-// let result=[]
-// for(i of arr){
-//     if(result.includes(i)){
-//         result.push(i)
-//         break
-//     }else{
-//         result.push(i)
-//     }
-// }   
-
-// console.log(result); // Output: 3
-
-// let num=1723
-// // output:4
-// temp=0
-// while(num>0){
-//     digit=num%10
-//     temp=temp+digit
-//     num=Math.floor(num/10)
-// }
-
-
-// console.log(temp)
+let arr=[2, 4, 1, 4, 3, 1, 1, 5, 3, 2]
+let result=[]
+for(i of arr){
+    if(!result.includes(i)){
+        result.push(i)
+    }
+}  
+// console.log(result);
+let f=0
+for(i of result) { //[ 2, 1, 3, 5 ]
+    c=0
+    n=0
+    for(j of arr){ //[2, 1, 3, 1, 2, 1, 5, 3, 2]
+        if(i==j){  //2==2 2==1 2==3 2==2
+            c++   //1  2
+        }else{
+            n++  //1  2
+        }
+        
+        if(c==2 && (c+n)!==arr.length){  //c==2 && 2+2!=8
+            // console.log(i);
+            f=i
+            break
+        }
+        
+    }
+    if(f!==0){
+        break
+    }
+}
+console.log(f);
