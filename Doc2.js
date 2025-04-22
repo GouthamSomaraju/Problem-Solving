@@ -578,7 +578,6 @@
 // }
 // peakElement(arr)
 
-
 // ----------------------------
 // Find the First Duplicate
 
@@ -587,34 +586,245 @@
 // Input: [2, 1, 3, 5, 3, 2]
 // Output: 3
 
-let arr=[2, 4, 1, 4, 3, 1, 1, 5, 3, 2]
-let result=[]
-for(i of arr){
-    if(!result.includes(i)){
-        result.push(i)
-    }
-}  
+// let arr=[2, 4, 1, 4, 3, 1, 1, 5, 3, 2]
+// let result=[]
+// for(i of arr){
+//     if(!result.includes(i)){
+//         result.push(i)
+//     }
+// }
 // console.log(result);
-let f=0
-for(i of result) { //[ 2, 1, 3, 5 ]
-    c=0
-    n=0
-    for(j of arr){ //[2, 1, 3, 1, 2, 1, 5, 3, 2]
-        if(i==j){  //2==2 2==1 2==3 2==2
-            c++   //1  2
-        }else{
-            n++  //1  2
-        }
-        
-        if(c==2 && (c+n)!==arr.length){  //c==2 && 2+2!=8
-            // console.log(i);
-            f=i
-            break
-        }
-        
-    }
-    if(f!==0){
-        break
-    }
-}
-console.log(f);
+// let f=0
+// for(i of result) { //[ 2, 1, 3, 5 ]
+//     c=0
+//     n=0
+//     for(j of arr){ //[2, 1, 3, 1, 2, 1, 5, 3, 2]
+//         if(i==j){  //2==2 2==1 2==3 2==2
+//             c++   //1  2
+//         }else{
+//             n++  //1  2
+//         }
+
+//         if(c==2 && (c+n)!==arr.length){  //c==2 && 2+2!=8
+//             // console.log(i);
+//             f=i
+//             break
+//         }
+
+//     }
+//     if(f!==0){
+//         break
+// }
+// }
+// console.log(f);
+
+// 22/4/2025
+
+// Implement a Basic Calculator
+
+// Problem: Write a function that takes two numbers and an operator (+, -, *, /) and returns the result.
+// Testcase 1:
+// Input: 2, 3, '+'
+// Output: 5
+// let num1 = 10;
+// let num2 = 20;
+// let operator = "*";
+// function Calculator(a, b, operator) {
+//   ans = 0;
+//   switch (operator) {
+//     case "+":
+//       ans = a + b;
+//       break;
+//     case "-":
+//       ans = a - b;
+//       break;
+//     case "*":
+//       ans = a * b;
+//       break;
+//     case "/":
+//       ans = a / b;
+//       break;
+//     default:
+//       "Invalid input";
+//   }
+//   console.log(ans);
+// }
+// Calculator(num1, num2, operator);
+
+// ------------------------------------------------------------------
+// FizzBuzz
+
+// Problem: Write a program that prints the numbers from 1 to 100. For multiples of three, print "Fizz" instead of the number, and for multiples of five, print "Buzz". For numbers that are multiples of both three and five, print "FizzBuzz".
+// Testcase 1:
+
+// Output:
+// 1
+// 2
+// Fizz
+// 4
+// Buzz
+// Fizz
+
+// 7
+// 8
+// Fizz
+// Buzz
+// 11
+// Fizz
+// ...
+
+// let three='Fizz'
+// let five='Buzz'
+// for(i=1;i<=100;i++){
+//     if(i%3==0&&i%5==0){
+//         console.log(three+five);
+
+//     }else if(i%3==0){
+//         console.log(three);
+
+//     }else if(i%5==0){
+//         console.log(five);
+
+//     }else{
+//         console.log(i);
+
+//     }
+// }
+// // output:1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz 16 17 Fizz ....
+// ----------------------------------
+// Generate Fibonacci Sequence
+
+// Problem: Write a function that generates the first n numbers in the Fibonacci sequence.
+// Testcase 1:
+// Input: 5
+// Output: [0, 1, 1, 2, 3]
+
+// let num = 5;
+// function fibinacci(num) {
+//   let array = [];
+//   (a = 0), (b = 1);
+//   for (i = 0; i < num; i++) {
+//     array.push(a);
+//     c = a + b;
+//     a = b;
+//     b = c;
+//   }
+//   console.log(array);
+// }
+
+// fibinacci(num);
+// // output:[ 0, 1, 1, 2, 3 ]
+
+// ----------------------------------------------------------
+// Sum of Digits
+
+// Problem: Write a function that takes a number and returns the sum of its digits.
+// Testcase 1:
+// Input: 123
+// Output: 6
+// let num=123
+// let sum=(num)=>{
+//     totalSum=0
+//     while(num>0){
+//         totalSum=totalSum+num%10
+//         num=Math.floor(num/10)
+//     }
+//     return totalSum
+// }
+// console.log(sum(num));
+// // output:6
+
+// ------------------------------------------
+
+// 21/4/2025
+// Binary Search Algorithm
+
+// Problem: Write a function to perform binary search on a sorted array.
+// Testcase 1:
+// Input: [1, 2, 3, 4, 5], 3
+// Output: 2 (the index of number 3 in the array)
+// let arr=[1, 2, 3, 4, 5]
+// let target=3
+// function binarySearch(arr,target){
+//     found=false
+//     indx=0
+//     for(i in arr){
+//         if(arr[i]===target){
+//            found=true
+//            indx=i
+//             break
+//         }
+//     }
+//     if(found && indx!==0){
+//         console.log(indx);
+
+//     }else{
+//         console.log('target not found');
+
+//     }
+
+// }
+// binarySearch(arr,target)
+// --------------------------------------------------
+// Check for Armstrong Number
+
+// Problem: Write a function to check if a number is an Armstrong number (e.g., 153 is an Armstrong number because 1^3 + 5^3 + 3^3 = 153).
+// Testcase 1:
+// Input: 1
+
+// Output: true
+// let num=153
+// let temp=num
+// let num2=num
+// length=0
+// while(num>0){
+//     digit=num%10
+//     length++
+//     num=Math.floor(num/10)
+
+// }
+// check=0
+// while(temp>0){
+//     digit=temp%10
+//     check=check+digit**length
+//     temp=Math.floor(temp/10)
+// }
+// if(check===num2){
+//     console.log(true);
+
+// }else{
+//     console.log(false);
+// }
+// // output: true
+
+// ---------------------------------------------
+// Check for Balanced Parentheses
+
+// Problem: Write a function to check if a string of parentheses is balanced.
+// Testcase 1:
+// Input: "{[()]}"
+// Output: true
+// Testcase 2:
+// Input: "{[(])}"
+// Output: false
+
+// let org="{[()]}"
+// let str="{[(])}"
+// let correct=false
+// for(i in org){
+//     if(org[i]==str[i]){
+//         correct=true
+//     }else{
+//         correct=false
+//         break
+//     }
+// }
+// if(correct){
+//     console.log(true);
+
+// }else{
+//     console.log(false);
+
+// }
+// output:false
+// --------------------------------
