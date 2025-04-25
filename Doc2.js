@@ -620,6 +620,48 @@
 
 // 22/4/2025
 
+// Find the First Non-Repeating Character
+
+// Problem: Write a function to find the first non-repeating character in a string.
+// Testcase 1:
+// Input: "swiss"
+// Output: 'w'
+arr=[2,1,3,5,3,2]
+ res=[]
+ for(i of arr){
+     if(!res.includes(i)){
+         console.log(i)
+         break;
+     }
+     else
+     {
+         res.push(i)
+     }
+ }
+// ----------------------------------------------
+// Find the Longest Word
+
+// Problem: Write a function to find the longest word in a string.
+// Testcase 1:
+// Input: "The quick brown fox jumps over the lazy dog"
+// Output: "jumps"
+// let str = "The quick brown fox jumps over the lazy dog";
+// function longest(str) {
+//   let arr = str.split(" ");
+//   len = 0;
+//   long = "";
+//   for (i of arr) {
+//     if (i.length >= len) {
+//       len = i.length;
+//       long = i;
+//     }
+//   }
+//   console.log(long);
+// }
+// longest(str)
+// // output:'jumps'
+
+// -----------------------------------
 // Implement a Basic Calculator
 
 // Problem: Write a function that takes two numbers and an operator (+, -, *, /) and returns the result.
@@ -828,3 +870,271 @@
 // }
 // output:false
 // --------------------------------
+
+
+
+// 25/04/2025
+// Check for Anagrams
+
+// Problem: Write a function to check if two strings are anagrams of each other.
+// Testcase 1:
+// Input: "listen", "silent"
+// Output: true
+
+// let a1='listen'
+// let a2='silent'
+// if(a1.length===a2.length){
+// let b1=a1.split('').sort().join('')
+// let b2=a2.split('').sort().join('')
+// if(b1===b2){
+//     console.log(true)
+// }else{
+//     console.log(false)
+// }
+// }else{
+//     console.log('Not Anagram')
+// }
+// output:true
+
+// let a1='listen'
+// let a2='silent'
+// let c=0
+// for(i of a1){
+//     for(j of a2){
+//         if(i===j){
+//             c++
+//         }
+//     }
+// }
+// if(c==a1.length){
+//     console.log(true)
+// }else{
+//     console.log(false)
+// }
+// // output:true
+// ---------------------------
+
+// Find the First Non-Repeating Character
+
+// Problem: Write a function to find the first non-repeating character in a string.
+// Testcase 1:
+// Input: "swiss"
+// Output: 'w'
+// let str = "swiss";
+// for (i of str) {
+//   c = 0;
+//   for (j of str) {
+//     if (i == j) {
+//       c++;
+//     }
+//   }
+//   if (c == 1) {
+//     console.log(i);
+//     break;
+//   }
+// }
+// // output:'w'
+// ------------------------------------
+
+// Check if String is a Valid Number
+
+// Problem: Write a function to check if a string is a valid number.
+// Testcase 1:
+// Input: "123.45"
+// Output: true
+
+// let str = "123.45";
+// let flag = false;
+// let dotcount = 0;
+// for (i = 0; i < str.length; i++) {
+//   let code = str.charCodeAt(i);
+//   if (code >= 48 && code <= 57) {
+//     flag = true;
+//   } else if (code == 46) {
+//     dotcount++;
+//     if (dotcount > 1) {
+//       flag = false;
+//       break;
+//     }
+//   } else {
+//     flag = false;
+//     break;
+//   }
+// }
+// if (flag && str !== "." && str.length > 0) {
+//   console.log(true);
+//   // console.log(count,str.length)
+// } else {
+//   console.log(false);
+// }
+// // Output: true
+
+// let str="123.45a"
+
+// OR
+
+// let num=Number(str)
+// if(isNaN(num)){
+//     console.log(false)
+// }else{
+//     console.log(true)
+// }
+// -----------------------------------------
+
+// Check if a String is a Rotation of Another String
+
+// Problem: Write a function to check if one string is a rotation of another string.
+// Testcase 1:
+// Input: "abcde", "cdeab"
+// Output: true
+
+// let a="abcde"
+// let b="cdeab"
+// let diff=b.charCodeAt(0)-a.charCodeAt(0)
+// count=0
+// if(a.length==b.length){
+//     for(i=0;i<a.length;i++){
+//         code=a.charCodeAt(i)
+//         if(String.fromCharCode(code+diff)==b[i]){
+//             count++
+//         }
+//     }
+//     if(count==a.length){
+//             console.log(true)
+//     }else{
+//             console.log(false)
+
+//         }
+// }else{
+//     console.log(false)
+// }
+// // Output: false
+// ------------------------------
+// Reverse Words in a String
+
+// Problem: Write a function to reverse the order of words in a given string.
+// Testcase 1:
+// Input: "hello world"
+// Output: "world hello"
+
+// let a="hello world"
+// let b=a.split(' ').reverse().join(' ')
+// console.log(b)
+
+//      OR
+
+// let a="hello world"
+// let b=a.split(' ')
+// let result=''
+// for(i=b.length-1;i>=0;i--){
+//     result+=b[i]+' '
+// }
+// console.log(result.trim())
+
+// //      OR
+
+// let a = "hello world";
+// let emp = [];
+// let res = "";
+// for (i = 0; i < a.length; i++) {
+//   if (a[i] === " ") {
+//     emp.push(res);
+//     res = "";
+//   } else {
+//     res += a[i];
+//   }
+// }
+// if (res !== "") {
+//   emp.push(res);
+// }
+
+// let final = "";
+// for (i = emp.length - 1; i >= 0; i--) {
+//   final += emp[i] + " ";
+// }
+// console.log(final); // output: world hello
+// ----------------------------------------
+
+// String Compression
+// `
+// Problem: Write a function to perform basic string compression using the counts of repeated characters.
+// Testcase 1:
+// Input: "aabcccccaaa"
+// Output: "a2b1c5a3"
+
+// let a="aabcccccaaa"
+// let res=''
+// for(i=0;i<a.length;i++){
+//     let count=0
+//     for(j=i;j<a.length;j++){
+//         if(a[i]==a[j]){
+//             count++
+//         }else{
+//             break
+//         }
+//     }
+//         res+=a[i]+count
+//         i=j-1
+// }
+// console.log(res) // output:a2b1c5a3
+// --------------------------------------------------
+
+// Find All Permutations of a String
+
+// Problem: Write a function to find all permutations of a given string.
+// Testcase 1:
+// Input: "abc"
+// Output: ["abc", "acb", "bac", "bca", "cab", "cba"]
+
+// let str="abc"
+// function getPermutations(str){
+//     if(str.length<=1) return [str]
+
+//     let permutations =[]
+
+//     for(let i=0;i<str.length;i++){
+//         let char=str[i]
+//         let remaining =str.slice(0,i)+str.slice(i+1)
+//         let remainingPerms =getPermutations(remaining )
+
+//         for(let perm of remainingPerms ){
+//             permutations.push(char+perm)
+//         }
+//     }
+
+//     return permutations
+// }
+
+// console.log(getPermutations('abc')) //output:[ 'abc', 'acb', 'bac', 'bca', 'cab', 'cba' ]
+// --------------------------------------------------
+
+// Convert Roman Numerals to Integer
+
+// Problem: Write a function to convert a Roman numeral string to an integer.
+
+//  Testcase 1:
+// Input: "MCMXCIV"
+// Output: 1994
+
+// let num = "MCMXCIV";
+// let obj = {
+//   I: 1,
+//   V: 5,
+//   X: 10,
+//   L: 50,
+//   C: 100,
+//   D: 500,
+//   M: 1000,
+// };
+// let str = 0;
+// for (i = 0; i < num.length; i++) {
+//   if (obj[num[i]] < obj[num[i + 1]]) {
+//     str = str + (obj[num[i + 1]] - obj[num[i]]);
+//     i = i + 1;
+//   } else {
+//     str = str + obj[num[i]];
+//   }
+// }
+// console.log(str); // output:1994
+// ---------------------------------
+
