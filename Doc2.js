@@ -432,9 +432,9 @@
 // Output: [4, 5, 1, 2, 3]
 
 // function rotateArray(nums, k) {
-//   const n = nums.length;
-//   k %= n;
-//   console.log(k);
+//   const n = nums.length; //5
+//   k %= n; //k=k%n 2%5
+//   console.log(k); //2
 //   for (let i = 0; i < k; i++) {
 //     let last = nums[n - 1];
 //     for (let j = n - 1; j > 0; j--) {
@@ -785,6 +785,7 @@ arr=[2,1,3,5,3,2]
 // Testcase 1:
 // Input: [1, 2, 3, 4, 5], 3
 // Output: 2 (the index of number 3 in the array)
+
 // let arr=[1, 2, 3, 4, 5]
 // let target=3
 // function binarySearch(arr,target){
@@ -1056,7 +1057,7 @@ arr=[2,1,3,5,3,2]
 // ----------------------------------------
 
 // String Compression
-// `
+
 // Problem: Write a function to perform basic string compression using the counts of repeated characters.
 // Testcase 1:
 // Input: "aabcccccaaa"
@@ -1106,6 +1107,8 @@ arr=[2,1,3,5,3,2]
 // }
 
 // console.log(getPermutations('abc')) //output:[ 'abc', 'acb', 'bac', 'bca', 'cab', 'cba' ]
+
+
 // --------------------------------------------------
 
 // Convert Roman Numerals to Integer
