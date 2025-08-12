@@ -16,11 +16,11 @@
 // Output : 567
 // Explanation : Reverse of the number 765 is 567.
 
-let num=765
-let rev=0
-while(num>0){
+// let num=765
+// let rev=0
+// while(num>0){
     
-}
+// }
 // ------------------------------------------
 
 // Testcase1 : 4
@@ -676,3 +676,277 @@ while(num>0){
     
     // console.log(isEmpty(obj)); // Output: true
 // -------------------------
+
+
+
+// 🔷 1. Anagram Checker
+// Problem: Check if two strings are anagrams of each other (i.e., same characters, different order).
+// Example:
+// Input: "listen", "silent" → Output: true
+
+// let str='listen'
+// let str2='Silent'
+// let emp=''
+// for(let i of str2){
+//    if(!emp.includes(i)){
+//     emp+=i
+//    }
+// }
+// c1=0, c2=0
+// for(i of emp){
+//     for(j of str){
+//         if(i.toLocaleLowerCase()==j.toLocaleLowerCase()){
+//             c1++
+//         }
+//     }
+//     for(k of str2){
+//           if(i.toLocaleLowerCase()==k.toLocaleLowerCase()){
+//             c2++
+//         }
+//     }
+// }
+// if(c1==c2){
+//     console.log('anagram');
+// }else{
+//     console.log('not anagram');
+    
+// }
+
+
+// 🔷 2. Find the First Non-Repeating Character
+// Problem: Return the first non-repeating character from a string.
+// Example:
+// Input: "aabbcde" → Output: "c"
+
+// let str='aabbcde'
+// for(i of str){
+//     c=0
+//     for(j of str){
+//         if(i==j){
+//             c++
+//         }
+//     }
+//     if(c==1){
+//         console.log(i);
+//         break
+        
+//     }
+// }
+
+
+// 🔷 3. Flatten a Nested Array
+// Problem: Write a function to flatten a nested array.
+// Example:
+// Input: [1, [2, [3, 4], 5]] → Output: [1, 2, 3, 4, 5]
+
+// let arr=[1, [2, [3, 4], 5]]
+
+// let res=[]
+// function flatArray (arr){
+//     for(let i=0;i<arr.length;i++){
+//         if(Array.isArray(arr[i])){
+//             flatArray(arr[i])
+//         }else{
+//             res.push(arr[i])
+//         }
+//     }
+   
+// }
+// flatArray(arr)
+// console.log(res);
+
+// 🔷 4. Remove All Falsy Values from an Array
+// Problem: Remove all falsy values (false, 0, "", null, undefined, NaN) from an array.
+// Example:
+// Input: [0, "hello", false, 42, "", null] → Output: ["hello", 42]
+
+// let arr=[0, "hello", false, 42, "", null]
+// let res=[]
+// for(i of arr){
+//     if(Boolean(i)){
+//         res.push(i)
+//     }
+// }
+// console.log(res);
+
+
+// 🔷 5. Group Elements by Frequency
+// Problem: Given an array, return a frequency object of all elements.
+// Example:
+// Input: [1, 2, 2, 3, 3, 3] → Output: {1:1, 2:2, 3:3}
+
+// let arr=[1, 2, 2, 3, 3, 3]
+// let obj={}
+// for(i of arr){
+//     if(obj[i]){
+//         obj[i]=obj[i]+1
+//     }else{
+//         obj[i]=1
+//     }
+// }
+// console.log(obj);
+
+
+// 🔷 6. Check for Balanced Parentheses
+// Problem: Check if a string has balanced parentheses.
+// Example:
+// Input: "((()))" → Output: true
+// Input: "(()" → Output: false
+
+// let str="({}(([)]))"
+// let c1=0, c2=0, c3=0
+// for(i of str){
+//     if(i=='('){
+//         c1++
+//     }else if(i==')'){
+//         c1--
+//     }else if(i=='{'){
+//         c2++
+//     }else if(i=='}'){
+//         c2--
+//     }else if(i=='['){
+//         c3++
+//     }else if(i==']'){
+//         c3--
+//     }
+// }
+// if(c1==0 && c2==0 && c3==0){
+//     console.log(true);
+// }else{
+//     console.log(false);
+// }
+
+// 🔷 7. Find Missing Number
+// Problem: Find the missing number in an array from 1 to n.
+// Example:
+// Input: [1, 2, 4, 5] → Output: 3
+
+// let arr=[1, 2, 4, 5]
+// let n=arr.length +1
+// let expectedSum=(n*(n+1))/2
+// let actualSum=arr.reduce((a,b)=>a+b,0)
+// let missing=expectedSum-actualSum
+// console.log(missing);
+
+// 🔷 8. Rotate Array by k Steps
+// Problem: Rotate an array to the right by k steps.
+// Example:
+// Input: ([1, 2, 3, 4, 5], k = 2) → Output: [4, 5, 1, 2, 3]
+
+// let arr=[1, 2, 3, 4, 5]
+// let k=2
+// let res=[]
+// function rotateArray (arr,k){
+// let n=arr.length
+// k=k%n
+// for(i=n-k;i<n;i++){
+//     res.push(arr[i])
+// }
+// for(i=0;i<n-k;i++){
+//     res.push(arr[i])
+// }
+// console.log(res);
+// }
+
+// rotateArray(arr,k)
+
+//  9. Capitalize First Letter of Each Word
+// Problem: Write a function to capitalize the first letter of each word in a sentence.
+// Example:
+// Input: "hello world" → Output: "Hello World"
+
+// let str="hello world"
+// let arr=str.split(' ')
+// res=[]
+// for(i of arr){
+//     str=''
+//     for(j in i){
+//         if(j==0){
+//             str+=i[j].toLocaleUpperCase()
+//         }else{
+//             str+=i[j]
+//         }
+//     }
+//     res.push(str)
+// }
+// console.log(res.join(' '));
+
+// 🔷 10. Sum of Digits Until Single Digit
+// Problem: Given a number, keep summing its digits until a single-digit number is obtained.
+// Example:
+// Input: 987 → 9 + 8 + 7 = 24 → 2 + 4 = 6 → Output: 6
+
+// let num=987
+// while(num>10){                //987 >10   24>10 6>10=false
+//     sum=0                      //0         0
+//     while(num>0){               //987 >0     98>0       9>0         | 24>0      2>0
+//         sum+=num%10             //0+7=7      7+8=15     15+9=24     | 0+2=2     2+4=6
+//         num=Math.floor(num/10)  //987/10=98  98/10=9    9/10=0      | 24/10=2   2/10=0
+//     }
+//     num=sum                     //num=24  num=6
+// }
+// console.log(num);
+
+
+// 2️⃣ Two Sum Problem
+// Problem: Given an array of numbers and a target, return the indices of the two numbers that add up to the target.
+// Example:
+// [2, 7, 11, 15], target = 9 → [0, 1]
+
+
+// let arr=[2, 7, 11, 15]
+// let target=9
+// let result=[]
+// for(i=0;i<arr.length;i++){
+//     for(j=i;j<arr.length;j++){
+//         if(arr[i]+arr[j]==target){
+//             result.push(i,j)
+//         }
+//     }
+// }
+// console.log(result);
+
+
+// 3️⃣ Merge Intervals
+// Problem: Merge overlapping intervals.
+// Example:
+// [[1,3],[2,6],[8,10],[15,18]] → [[1,6],[8,10],[15,18]]
+
+// let arr=[[1,3],[2,6],[8,10],[15,18],[17,20],[22,25]]
+
+// arr.sort((a,b)=>a[0]-b[0])
+
+// let merged=[arr[0]]                             //[ [ 1, 3 ] ] 
+
+// for(i=1;i<arr.length;i++){
+//     let last=merged[merged.length-1]            //[ 1, 3 ]                          [ 1, 3 ]        [8,10]
+//     let current=arr[i]                          //[ 2, 6 ]                          [ 8, 10 ]       [15,18]
+
+//     if(current[0]<=last[1]){                    //2<=3                              8<=3            18<=10
+//         last[1]=Math.max(last[1],current[1])    //last[1]=Math.max(3,6)= [1,6]
+//     }else{
+//         merged.push(current)                    //                                  [[1,6],[8,10]]   [[1,6],[8,10],[15,18]]
+//     }
+// }
+
+// console.log(merged);
+
+
+let arr=[[1,3],[2,6],[8,10],[15,18],[17,20],[22,25],[0,2]]
+
+arr.sort((a,b)=>a[0]-b[0])
+
+let merged=[arr[0]]
+
+for(i=1;i<arr.length;i++){
+    let start=merged[merged.length-1]
+    let current=arr[i]
+
+    if(current[0]<=start[1]){
+        start[1]=Math.max(start[1],current[1])
+    }else{
+        merged.push(current)
+    }
+}
+console.log(merged);
+
